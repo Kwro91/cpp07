@@ -24,7 +24,11 @@ This project focuses on `Templates` :
 
 ### ex00
 
+Discover the template by creating some functions : `swap`, `min` & `max`.
+
 ### ex01
+
+Create a template `Iter`
 
 ### ex02
 
