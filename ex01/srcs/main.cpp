@@ -39,6 +39,10 @@ int main (){
 			std::cout << "s[" << i << "] = " << s[i] << std::endl;
 		}
 	}
-
+	std::cout << BLUE << "///////////////////////////////////////////////" << WHITE << std::endl;
+	{
+		std::string *a = NULL;
+		iter(a, 10, addHello);
+	}
 
 }
