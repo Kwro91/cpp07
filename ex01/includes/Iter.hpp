@@ -9,13 +9,11 @@
 
 template <typename T, typename F> void	iter(T *a, size_t l, F f)
 {
-	if (!a)
+	if (!a || l == 0 || !f)
 	{
-		std::cerr << RED << "No array found." << WHITE << std::endl;
+		std::cerr << RED << "Error: pls retry with : array, size_t len, function." << WHITE << std::endl;
 		return ;
 	}
 	for (size_t i = 0 ; i < l ; i++)
-	{
 		a[i] = f(a[i]);
-	}
 }
