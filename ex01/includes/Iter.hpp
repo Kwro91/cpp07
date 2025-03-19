@@ -10,7 +10,8 @@
 #define ROSE "\033[1;35m"
 #define CYAN "\033[1;36m"
 
-template <typename T, typename F> void	iter(T *a, size_t l, F f)
+template <typename T, typename F>
+void	iter(T *a, size_t l, F f)
 {
 	if (!a || l == 0 || !f)
 	{

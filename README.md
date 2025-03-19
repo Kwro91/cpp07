@@ -24,13 +24,15 @@ This project focuses on `Templates` :
 
 ### ex00
 
-Discover the template by creating some functions : `swap`, `min` & `max`.
+Discover the [template](https://www.geeksforgeeks.org/templates-cpp/) by creating some functions : `swap`, `min` & `max`.
 
 ### ex01
 
 Create a template `Iter` with 3 parameters. One is an `adress of an array`. The second is the `length` of the first. and the third is a `function` that must apply to all element of the array.
 
 ### ex02
+
+[classes templates](https://koor.fr/Cpp/Templates/TemplatedClass.wp)
 
 ## Links
 You can find my other CPP modules here :
