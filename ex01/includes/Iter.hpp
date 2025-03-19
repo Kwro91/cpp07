@@ -1,3 +1,6 @@
+#ifndef ITER_HPP
+#define ITER_HPP
+
 #include <iostream>
 #define WHITE "\033[0m"
 #define RED "\033[1;31m"
@@ -17,3 +20,5 @@ template <typename T, typename F> void	iter(T *a, size_t l, F f)
 	for (size_t i = 0 ; i < l ; i++)
 		a[i] = f(a[i]);
 }
+
+#endif
