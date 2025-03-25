@@ -1,6 +1,7 @@
 NAME = array
 
 SRC = srcs/main.cpp\
+
 	
 CC =  c++
 
