@@ -32,7 +32,7 @@ Create a template `Iter` with 3 parameters. One is an `adress of an array`. The 
 
 ### ex02
 
-[classes templates](https://koor.fr/Cpp/Templates/TemplatedClass.wp)
+Create a [classes templates](https://koor.fr/Cpp/Templates/TemplatedClass.wp) `Array`. It create an array of given type & size. Elements of the array can be accessed through the `[] operator`. It must throw an exception if the index set by the user is `Out of range`. Also create a `size()` function that return the number of elements.
 
 ## Links
 You can find my other CPP modules here :
@@ -50,6 +50,8 @@ You can find my other CPP modules here :
 
 - [CPP_06](https://github.com/Kwro91/cpp06) : Cast, Type conversion.
 
+- [CPP_07](https://github.com/Kwro91/cpp07) : Template.
+
 ## Screenshot
 
 ### `Exercice 00`:
@@ -58,5 +60,5 @@ You can find my other CPP modules here :
 ### `Exercice 01`:
 <img width="400" alt="Run" src="img/ex01.png">
 
-### `Exercice 01`:
+### `Exercice 02`:
 <img width="400" alt="Run" src="img/ex02.png">
