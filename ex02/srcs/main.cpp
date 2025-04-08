@@ -20,8 +20,7 @@ int main (){
 			std::cout << "array[" << i << "]: " << a[i] << std::endl;
 		}
 
-		// std::cout << a[10] << std::endl; //For Exception test
-
+		
 		std::cout << BLUE << "Test avec constructeur par copie:" << WHITE << std::endl;
 		Array<int> a2(a);
 		for (unsigned int i = 0 ; i < a2.size() ; i++)
@@ -32,7 +31,14 @@ int main (){
 		a3 = a2;
 		for (unsigned int i = 0 ; i < a3.size() ; i++)
 			std::cout << "array3[" << i << "]: " << a3[i] << std::endl;
-
+			
+	} catch (std::exception &e) {
+		std::cerr << YELLOW << e.what() << WHITE << std::endl;
+	}
+	std::cout << "//////////////////// EXCEPTION TEST /////////////////////////////" << std::endl;
+	try {
+		Array<int> a(3);
+		std::cout << a[10] << std::endl; //For Exception test
 	} catch (std::exception &e) {
 		std::cerr << YELLOW << e.what() << WHITE << std::endl;
 	}

@@ -19,7 +19,7 @@ void	iter(T *a, size_t l, F f)
 		return ;
 	}
 	for (size_t i = 0 ; i < l ; i++)
-		a[i] = f(a[i]);
+		f(a[i]);
 }
 
 #endif

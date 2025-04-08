@@ -1,20 +1,22 @@
 #include "../includes/Iter.hpp"
 
-int	invertValue(int i){
-	if (!i)
-		return (0);
-	return (-i);
+void	invertValue(int &i){
+	i = -i;
 }
 
-std::string	addHello(std::string s){
+void	addHello(std::string &s){
 	if (s.empty())
-		return (NULL);
+		return ;
 	s = "Hello " + s;
-	return (s);
+}
+
+void	add42(int &i){
+	i += 42;
 }
 
 int main (){
 	{ //test with int *
+		std::cout << "Test invert value" << std::endl;
 		int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		std::cout << GREEN << "Before :" << WHITE << std::endl;
 		for (size_t i = 0; i < 10 ; i++)
@@ -29,7 +31,25 @@ int main (){
 		}
 	}
 	std::cout << BLUE << "///////////////////////////////////////////////" << WHITE << std::endl;
+	{ //test with add 42
+		std::cout << "Test add 42" << std::endl;
+		int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+		std::cout << GREEN << "Before :" << WHITE << std::endl;
+		for (size_t i = 0; i < 10 ; i++)
+		{
+			std::cout << "a[" << i << "] = " << a[i] << std::endl;
+		}
+			iter(a, 10, add42);
+		std::cout << ROSE << "After :" << WHITE << std::endl;
+		for (size_t i = 0; i < 10 ; i++)
+		{
+			std::cout << "a[" << i << "] = " << a[i] << std::endl;
+		}
+	}
+
+	std::cout << BLUE << "///////////////////////////////////////////////" << WHITE << std::endl;
 	{ //test with string *
+		std::cout << "Test add Hello" << std::endl;
 		std::string s[10] ={"Robert", "Gerard", "Lucie", "Benoit", "Yuki", "Inspiration.exe", "Sept", "Pitichat", "Goku", "Jett"};
 		std::cout << GREEN << "Before :" << WHITE << std::endl;
 		for (size_t i = 0; i < 10 ; i++)
@@ -45,6 +65,7 @@ int main (){
 	}
 	std::cout << BLUE << "///////////////////////////////////////////////" << WHITE << std::endl;
 	{ //test with NULL
+		std::cout << "Test with NULL ptr" << std::endl;
 		std::string *a = NULL;
 		iter(a, 10, addHello);
 	}
